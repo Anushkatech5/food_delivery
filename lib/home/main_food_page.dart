@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:food_delivery/home/food_page_body.dart';
 import 'package:food_delivery/utils/colors.dart';
 import 'package:food_delivery/widgets/big_text.dart';
 
@@ -9,15 +10,16 @@ class MainFoodPage extends StatefulWidget {
   const MainFoodPage({super.key});
 
   @override
-  State<MainFoodPage> createState() => _MainFoodState();
+  State<MainFoodPage> createState() => _MainFoodPageState();
 }
 
-class _MainFoodState extends State<MainFoodPage> {
+class _MainFoodPageState extends State<MainFoodPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: [
+          //showing the header
           Container(
 
             child: Container(
@@ -51,7 +53,9 @@ class _MainFoodState extends State<MainFoodPage> {
                 ],
               ),
             ),
-          )
+          ),
+          //showing the body
+          FoodPageBody(),
         ],
       )
     );
